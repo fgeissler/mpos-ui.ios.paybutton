@@ -1,9 +1,9 @@
 /*
- * mpos-ui : http://www.payworksmobile.com
+ * mpos-ui : http://www.payworks.com
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2015 payworks GmbH
+ * Copyright (c) 2015 Payworks GmbH
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -86,8 +86,15 @@
 }
 
 - (void)l10n {
-    [self.retryButton setTitle:[MPUUIHelper localizedString:@"MPURetry"] forState:UIControlStateNormal];
-    [self.cancelButton setTitle:[MPUUIHelper localizedString:@"MPUClose"] forState:UIControlStateNormal];
+    
+    NSAttributedString *retryAttString = [[NSAttributedString alloc] initWithString:[MPUUIHelper localizedString:@"MPURetry"] attributes:[MPUUIHelper actionButtonTitleAttributesBold:NO]];
+    [self.retryButton setAttributedTitle:retryAttString forState:UIControlStateNormal];
+    self.retryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    
+    
+    NSAttributedString *cancelAttString = [[NSAttributedString alloc] initWithString:[MPUUIHelper localizedString:@"MPUClose"] attributes:[MPUUIHelper actionButtonTitleAttributesBold:YES]];
+    [self.cancelButton setAttributedTitle:cancelAttString forState:UIControlStateNormal];
+    self.cancelButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

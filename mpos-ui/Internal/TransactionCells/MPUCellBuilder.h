@@ -1,9 +1,9 @@
 /*
- * mpos-ui : http://www.payworksmobile.com
+ * mpos-ui : http://www.payworks.com
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2016 payworks GmbH
+ * Copyright (c) 2016 Payworks GmbH
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,12 +27,17 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef  UITableViewCell * (^MPUCellBuilderBlock)(void);
+@class MPUTransactionCell;
+
+typedef  MPUTransactionCell* (^MPUCellBuilderBlock)(void);
+
+extern const CGFloat MPUCellBuilderDefaultCellHeight;
 
 @interface MPUCellBuilder : NSObject
 
 @property (copy, nonatomic) MPUCellBuilderBlock build;
 @property (assign, nonatomic) CGFloat cellHeight;
+@property (assign, nonatomic) BOOL forceHideSepparator;
 
 + (instancetype)builderWithBlock:(MPUCellBuilderBlock)block;
 

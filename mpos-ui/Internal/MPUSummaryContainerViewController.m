@@ -1,9 +1,9 @@
 /*
- * mpos-ui : http://www.payworksmobile.com
+ * mpos-ui : http://www.payworks.com
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2015 payworks GmbH
+ * Copyright (c) 2015 Payworks GmbH
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -157,11 +157,7 @@ NSString* const MPUSegueIdentifierSummary_Login = @"smPushLogin";
     self.summaryViewController.refundEnabled = YES;
     self.summaryViewController.retryEnabled = NO;
     self.summaryViewController.delegate = self;
-    //needed since the [rightButtonItem] needs the mposUi to evaluate the feature
     self.summaryViewController.mposUi = self.mposUi;
-    [self.delegate setBackButtonItem:[self.summaryViewController backButtonItem]];
-    [self.delegate setRightButtonItem:[self.summaryViewController rightButtonItem]];
-    
 }
 
 - (void)showLogin {

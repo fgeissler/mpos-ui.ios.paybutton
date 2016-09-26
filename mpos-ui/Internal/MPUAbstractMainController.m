@@ -1,9 +1,9 @@
 /*
- * mpos-ui : http://www.payworksmobile.com
+ * mpos-ui : http://www.payworks.com
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2015 payworks GmbH
+ * Copyright (c) 2015 Payworks GmbH
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -100,26 +100,14 @@
 
 - (void)hideBackButton:(BOOL)hide {
     
-    [self setBackButtonItem:(hide)?nil:self.backButton];
-    
+    self.navigationItem.leftBarButtonItem = (hide)?nil:self.backButton;
 }
 
 
 - (void)hideCloseButton:(BOOL)hide {
 
-    [self setRightButtonItem:(hide)?nil:self.closeButton];
+    self.navigationItem.rightBarButtonItem = (hide)?nil:self.closeButton;
 }
 
-
-- (void)setRightButtonItem:(UIBarButtonItem *)rightButtonItem {
-    
-    self.navigationItem.rightBarButtonItem = rightButtonItem;
-}
-
-
-- (void)setBackButtonItem:(UIBarButtonItem *)backButtonItem {
-    
-    self.navigationItem.leftBarButtonItem = backButtonItem;
-}
 
 @end

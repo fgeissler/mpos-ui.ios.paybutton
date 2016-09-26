@@ -1,9 +1,9 @@
 /*
- * mpos-ui : http://www.payworksmobile.com
+ * mpos-ui : http://www.payworks.com
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2016 payworks GmbH
+ * Copyright (c) 2016 Payworks GmbH
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,10 +25,11 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "MPUTransactionCell.h"
 
 extern NSString * const MPUTransactionHistoryDetailCellIdentifier;
 
-@interface MPUTransactionHistoryDetailCell : UITableViewCell
+@interface MPUTransactionHistoryDetailCell : MPUTransactionCell
 
 @property (weak, nonatomic) IBOutlet UILabel *transactionTypeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;

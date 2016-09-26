@@ -1,9 +1,9 @@
 /*
- * mpos-ui : http://www.payworksmobile.com
+ * mpos-ui : http://www.payworks.com
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2015 payworks GmbH
+ * Copyright (c) 2015 Payworks GmbH
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -52,6 +52,26 @@
  * The style of the status bar.
  */
 @property (nonatomic, assign) UIStatusBarStyle  statusBarStyle;
+
+
+
+/**
+ * The colors used to customize the summary header
+ */
+@property (nonatomic, strong, nonnull) UIColor *preauthorizedBackgroundColor;
+@property (nonatomic, strong, nonnull) UIColor *preauthorizedTextColor;
+
+@property (nonatomic, strong, nonnull) UIColor *approvedBackgroundColor;
+@property (nonatomic, strong, nonnull) UIColor *approvedTextColor;
+
+@property (nonatomic, strong, nonnull) UIColor *declinedBackgroundColor;
+@property (nonatomic, strong, nonnull) UIColor *declinedTextColor;
+
+@property (nonatomic, strong, nonnull) UIColor *refundedBackgroundColor;
+@property (nonatomic, strong, nonnull) UIColor *refundedTextColor;
+
+@property (nonatomic, strong, nullable) UIColor *actionButtonTextColor;
+
 
 
 @end
